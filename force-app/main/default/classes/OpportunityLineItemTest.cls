@@ -97,8 +97,15 @@ private class OpportunityLineItemTest
 
         Test.startTest();
 
+        Integer start = Limits.getCpuTime();
+        System.debug(start);
+
         oliA.Type__c = 'Golf';
         update oliA;
+
+        Integer stop = Limits.getCpuTime();
+        System.debug(stop);
+        System.debug(stop - start);
 
         Test.stopTest();
 
